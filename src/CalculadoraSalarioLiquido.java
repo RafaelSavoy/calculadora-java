@@ -1,6 +1,5 @@
 import java.awt.BorderLayout;
 import javax.swing.JButton;
-import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import java.awt.Color;
@@ -15,7 +14,6 @@ public class CalculadoraSalarioLiquido extends JPanel {
     private final String placeholderText = "Digite seu Salário";
 
     public CalculadoraSalarioLiquido() {
-      
 
         JPanel painel = new JPanel(); // Painel principal
         GridLayout grid = new GridLayout(1, 15);
@@ -63,7 +61,6 @@ public class CalculadoraSalarioLiquido extends JPanel {
         setLayout(new BorderLayout()); // Definindo o layout do JFrame
         add(painel, BorderLayout.CENTER); // Adicionando o painel ao centro
 
-       
         setSize(400, 300); // Ajustando o tamanho
         setVisible(true);
 
@@ -94,4 +91,3 @@ public class CalculadoraSalarioLiquido extends JPanel {
     }
 
 }
-
