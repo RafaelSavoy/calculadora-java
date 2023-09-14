@@ -12,16 +12,50 @@ public class CalculadoraJurosCompostos extends JPanel {
     private JTextArea resultadoArea;
 
     public CalculadoraJurosCompostos() {
+
         setLayout(new BorderLayout());
 
-        // Painel para a entrada de valores
+        JPanel mainPanel = new JPanel(new BorderLayout());
+
+        mainPanel.add(criarAreaDeResultados(), BorderLayout.NORTH);
+        mainPanel.add(criarPainelDeInputs(), BorderLayout.CENTER);
+        mainPanel.add(criarBotaoDeCalcular(), BorderLayout.SOUTH);
+
+        add(mainPanel, BorderLayout.CENTER);
+
+        setPreferredSize(new Dimension(400, 300));
+    }
+
+    private JButton criarBotaoDeCalcular() {
+        JButton calcularButton = new JButton("Calcular");
+
+        calcularButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calcularJurosCompostos();
+            }
+        });
+
+        return calcularButton;
+    }
+
+    private JTextArea criarAreaDeResultados() {
+        resultadoArea = new JTextArea();
+        resultadoArea.setEditable(false);
+        resultadoArea.setFont(new Font("Arial", Font.PLAIN, 16));
+        resultadoArea.setOpaque(false);
+        resultadoArea.setPreferredSize(new Dimension(200, 60));
+
+        return resultadoArea;
+    }
+
+    private JPanel criarPainelDeInputs() {
         JPanel inputPanel = new JPanel(new GridLayout(3, 2, 10, 5));
+
         principalField = createInputField("Principal (R$)");
         taxaField = createInputField("Taxa de Juros Anual (%)");
         periodoField = createInputField("Período (anos)");
 
-        // Adicione um preenchimento interno nos campos de entrada para reduzir o
-        // tamanho vertical
         principalField.setMargin(new Insets(2, 2, 2, 2));
         taxaField.setMargin(new Insets(2, 2, 2, 2));
         periodoField.setMargin(new Insets(2, 2, 2, 2));
@@ -33,38 +67,16 @@ public class CalculadoraJurosCompostos extends JPanel {
         inputPanel.add(new JLabel("Período (anos)"));
         inputPanel.add(periodoField);
 
-        // Botão para calcular
-        JButton calcularButton = new JButton("Calcular");
-        calcularButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calcularJurosCompostos();
-            }
-        });
-
-        // Painel para o resultado
-        resultadoArea = new JTextArea();
-        resultadoArea.setEditable(false);
-        resultadoArea.setFont(new Font("Arial", Font.PLAIN, 16));
-        resultadoArea.setOpaque(false);
-        resultadoArea.setPreferredSize(new Dimension(200, 60));
-
-        // Painel principal
-        JPanel mainPanel = new JPanel(new BorderLayout());
-        mainPanel.add(resultadoArea, BorderLayout.NORTH);
-        mainPanel.add(inputPanel, BorderLayout.CENTER);
-        mainPanel.add(calcularButton, BorderLayout.SOUTH);
-
-        add(mainPanel, BorderLayout.CENTER);
-
-        setPreferredSize(new Dimension(400, 300));
+        return inputPanel;
     }
 
     private JTextField createInputField(String placeholder) {
         JTextField textField = new JTextField();
+
         textField.setFont(new Font("Arial", Font.PLAIN, 14));
         textField.setForeground(Color.GRAY);
         textField.setText(placeholder);
+
         textField.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(java.awt.event.FocusEvent e) {
@@ -82,6 +94,7 @@ public class CalculadoraJurosCompostos extends JPanel {
                 }
             }
         });
+
         return textField;
     }
 
