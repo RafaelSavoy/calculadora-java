@@ -7,7 +7,7 @@
 
 	- FlowLayout: Posiciona os elementos em uma única linha segugindo a ordem que foram adcionados. 
 
-	- GridLayout: Organiza os componentes em células e colunas de maneira uniforme, definidas na definição do GridLayout. 
+	- GridLayout: Organiza os componentes em células e colunas de maneira uniforme.
 
 	- CardLayout: Permite alternar entre diferentes painéis como se fossem cartões, exibindo apenas um de cada vez.
 
