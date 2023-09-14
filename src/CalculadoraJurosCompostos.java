@@ -22,9 +22,9 @@ public class CalculadoraJurosCompostos extends JPanel {
 
         // Adicione um preenchimento interno nos campos de entrada para reduzir o
         // tamanho vertical
-        principalField.setMargin(new Insets(5, 5, 5, 5));
-        taxaField.setMargin(new Insets(5, 5, 5, 5));
-        periodoField.setMargin(new Insets(5, 5, 5, 5));
+        principalField.setMargin(new Insets(2, 2, 2, 2));
+        taxaField.setMargin(new Insets(2, 2, 2, 2));
+        periodoField.setMargin(new Insets(2, 2, 2, 2));
 
         inputPanel.add(new JLabel("Principal (R$)"));
         inputPanel.add(principalField);
@@ -45,7 +45,7 @@ public class CalculadoraJurosCompostos extends JPanel {
         // Painel para o resultado
         resultadoArea = new JTextArea();
         resultadoArea.setEditable(false);
-        resultadoArea.setFont(new Font("Arial", Font.PLAIN, 14));
+        resultadoArea.setFont(new Font("Arial", Font.PLAIN, 16));
         resultadoArea.setOpaque(false);
         resultadoArea.setPreferredSize(new Dimension(200, 60));
 
@@ -87,9 +87,9 @@ public class CalculadoraJurosCompostos extends JPanel {
 
     private void calcularJurosCompostos() {
         try {
-            double principal = Double.parseDouble(principalField.getText());
-            double taxa = Double.parseDouble(taxaField.getText()) / 100.0;
-            int periodo = Integer.parseInt(periodoField.getText());
+            double principal = Double.parseDouble(principalField.getText().replace(',', '.'));
+            double taxa = Double.parseDouble(taxaField.getText().replace(',', '.')) / 100.0;
+            int periodo = Integer.parseInt(periodoField.getText().replace(',', '.'));
 
             double montante = principal * Math.pow(1 + taxa, periodo);
             double juros = montante - principal;
