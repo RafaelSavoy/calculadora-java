@@ -1,3 +1,5 @@
+//Primeiramente foi importada todas as bibliotecas, que possibilitaram o funcionamento dos layouts, sem elas o pacote básico do java não reconheceria os códigos usados
+
 import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,19 +12,25 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.GridLayout;
 
-public class CalculadoraSalarioLiquido extends JPanel {
+//Foi definida uma "public class" para a "CalculadoraSalarioLiquido extends Jframe" que importa todos os métodos da classe
+public class CalculadoraSalarioLiquido extends JFrame {
+
+    // Foi definida uma variável privada boleana do tipo "Boolean" nomeada "isPlaceHolderActive"
     private boolean isPlaceholderActive = true;
+     // Foi definida uma variável privada de texto do tipo "Boolean" nomeada "placeholderText"
     private final String placeholderText = "Digite seu Salário";
 
+    //foi definido o construtor do tipo publico "public CalculadoraSalarioLiquido" 
     public CalculadoraSalarioLiquido() {
-      
+        //definimos o nome da frame através do construtor "Super"
+        super("Calculadora Salario Líquido");
 
+        //Foi usado o JPnael painel como painel principal
         JPanel painel = new JPanel(); // Painel principal
-        GridLayout grid = new GridLayout(1, 15);
-        JTextArea but = new JTextArea();
-        but.setLayout(grid);
+        JTextArea but = new JTextArea(1,15);
         JTextArea resultado = new JTextArea();
         JButton enviar = new JButton("Enviar");
+
 
         but.setForeground(Color.GRAY);
         but.setText(placeholderText);
@@ -63,8 +71,9 @@ public class CalculadoraSalarioLiquido extends JPanel {
         setLayout(new BorderLayout()); // Definindo o layout do JFrame
         add(painel, BorderLayout.CENTER); // Adicionando o painel ao centro
 
-       
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300); // Ajustando o tamanho
+        setLocationRelativeTo(null); // Centralizando a janela
         setVisible(true);
 
         enviar.addActionListener(new ActionListener() {
@@ -94,4 +103,3 @@ public class CalculadoraSalarioLiquido extends JPanel {
     }
 
 }
-
