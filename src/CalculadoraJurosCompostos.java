@@ -77,6 +77,8 @@ public class CalculadoraJurosCompostos extends JPanel {
         textField.setForeground(Color.GRAY);
         textField.setText(placeholder);
 
+        textField.setPreferredSize(new Dimension(getPreferredSize().width, 60));
+
         textField.addFocusListener(new FocusListener() {
             @Override
             public void focusGained(java.awt.event.FocusEvent e) {

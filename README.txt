@@ -69,7 +69,7 @@ A aplicação possui as seguintes funcionalidades:
 
 Comparação dos Layouts A comparação dos layouts baseou-se em vários critérios:
 
-Usabilidade: Ambos os layouts são usáveis,GridBagLayout é um gerenciador de layout em Java que oferece uma flexibilidade  mas o GridLayout oferece uma organização  uniforme dos botões, tornando mais fácil para o usuário identificar e pressionar os números e operadores desejados.
+Usabilidade: Ambos os layouts são usáveis, o GridLayout oferece uma organização  uniforme dos botões, tornando mais fácil para o usuário identificar e pressionar os números e operadores desejados já GridBagLayout É altamente flexível e permite posicionar  e modificar os componentes de forma precisa, mas requer configuração detalhada das restrições de grade e o BorderLayout consegue definir a localização dos componentes.
 Estética: A estética é subjetiva, mas o GridLayout tende a parecer mais organizado e equilibrado, enquanto o BorderLayout é adequado para layouts simples.
 Espaço Utilizado: O GridLayout utiliza espaço de forma mais eficiente para os botões, enquanto o BorderLayout permite uma organização hierárquica de elementos.
 Complexidade de Implementação: Ambos os layouts são relativamente simples de implementar, mas o GridLayout requer menos código para organizar os botões.
