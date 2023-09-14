@@ -43,32 +43,3 @@ A aplicação possui as seguintes funcionalidades:
 
 
 
-Comparação dos Layouts com Base nos Critérios Identificados:
-
-    Flexibilidade na Organização de Componentes:
-        GridBagLayout (container principal): É altamente flexível e permite posicionar  e modificar os componentes de forma precisa, mas requer configuração detalhada das restrições de grade.
-        GridLayout (: É rígido em termos de número de linhas e colunas, adequado para organizar os JComboBoxes e Jlabels em uma grade fixa de 2x3.
-        BorderLayout : É simples e eficaz para organizar os componentes em uma estrutura de painel de entrada de texto na parte superior e botões no centro.
-     
-
-    Complexidade de Configuração:
-        GridBagLayout: É o mais complexo de configurar, exigindo o uso de GridBagConstraints para definir as posições e tamanhos dos componentes.
-        GridLayout : É relativamente simples de configurar, pois define uma grade fixa.
-        BorderLayout : É fácil de configurar, pois possui apenas cinco regiões (Norte, Sul, Leste, Oeste e Centro).
-       
-
-    Uso Eficiente do Espaço:
-        GridBagLayout : Permite um uso eficiente do espaço, mas a eficiência depende das configurações das restrições de grade.
-        GridLayout : Usa espaço de forma eficaz para os JComboBoxes e rótulos, mas a grade é fixa.
-        BorderLayout : Usa espaço eficientemente, alocando todo o espaço disponível para a caixa de texto e os botões no centro.
-       
-
-    Estilo de Layout:
-        GridBagLayout : É altamente flexível e pode ser adaptado a qualquer estilo de layout, mas requer configuração.
-        GridLayout: É adequado para layouts de grade fixa, como tabelas, mas menos flexível em termos de organização.
-        BorderLayout: É ideal para layouts simples com componentes nas regiões norte e central.
-      
-
-Conclusão:
-Cada layout utilizado na "Calculadora de Conversão de Moeda" tem suas vantagens e desvantagens. A escolha do layout depende dos requisitos de flexibilidade, complexidade de configuração, uso eficiente do espaço e estilo de layout desejados para cada parte da interface. O GridBagLayout é o mais flexível, mas também o mais complexo de configurar, enquanto o BorderLayout é mais simples e eficiente para organizar componentes em regiões predefinidas. Cada layout atende às necessidades específicas da interface da aplicação.
-
