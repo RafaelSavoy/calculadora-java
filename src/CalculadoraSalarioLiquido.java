@@ -81,7 +81,7 @@ public class CalculadoraSalarioLiquido extends JPanel {
                             "\nSalário Líquido: " + salarioLiquido;
 
                     resultado.setText(resultadoTexto);
-                    but.setText(null);
+                    but.setText(placeholderText);
 
                 } catch (NumberFormatException ex) {
                     resultado.setText("Entrada inválida");
@@ -89,5 +89,8 @@ public class CalculadoraSalarioLiquido extends JPanel {
             }
         });
     }
+
+    
+
 
 }
