@@ -50,15 +50,15 @@ public class CalculadoraJurosCompostos extends JPanel {
     }
 
     private JPanel criarPainelDeInputs() {
-        JPanel inputPanel = new JPanel(new GridLayout(3, 2, 10, 5));
+        JPanel inputPanel = new JPanel(new GridLayout(5, 2, 1, 20));
 
-        principalField = createInputField("Principal (R$)");
-        taxaField = createInputField("Taxa de Juros Anual (%)");
-        periodoField = createInputField("Período (anos)");
+        principalField = criarInput("Principal (R$)");
+        taxaField = criarInput("Taxa de Juros Anual (%)");
+        periodoField = criarInput("Período (anos)");
 
-        principalField.setMargin(new Insets(2, 2, 2, 2));
-        taxaField.setMargin(new Insets(2, 2, 2, 2));
-        periodoField.setMargin(new Insets(2, 2, 2, 2));
+        principalField.setMargin(new Insets(5, 5, 5, 5));
+        taxaField.setMargin(new Insets(5, 5, 5, 5));
+        periodoField.setMargin(new Insets(5, 5, 5, 5));
 
         inputPanel.add(new JLabel("Principal (R$)"));
         inputPanel.add(principalField);
@@ -70,14 +70,14 @@ public class CalculadoraJurosCompostos extends JPanel {
         return inputPanel;
     }
 
-    private JTextField createInputField(String placeholder) {
+    private JTextField criarInput(String placeholder) {
         JTextField textField = new JTextField();
 
         textField.setFont(new Font("Arial", Font.PLAIN, 14));
         textField.setForeground(Color.GRAY);
         textField.setText(placeholder);
 
-        textField.setPreferredSize(new Dimension(getPreferredSize().width, 60));
+        textField.setPreferredSize(new Dimension(getPreferredSize().width, 10));
 
         textField.addFocusListener(new FocusListener() {
             @Override

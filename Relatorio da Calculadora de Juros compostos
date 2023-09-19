@@ -1,0 +1,33 @@
+Descrição da Calculadora de Juros Compostos
+
+Introdução:
+A "Calculadora de Juros Compostos" é uma aplicação Java Swing que permite aos usuários calcular o montante acumulado e os juros ao longo do tempo com base no principal, taxa de juros anual e período em anos. Ela oferece uma interface gráfica amigável para inserir os valores e exibe os resultados de forma clara.
+
+Componentes da Interface Gráfica:
+A aplicação utiliza componentes da biblioteca Swing para criar sua interface gráfica:
+
+JTextField (principalField): Este campo de texto permite aos usuários inserir o valor principal (capital) em reais (R$).
+JTextField (taxaField): Permite aos usuários inserir a taxa de juros anual em porcentagem (%).
+JTextField (periodoField): Permite aos usuários inserir o período em anos para o cálculo.
+JButton (calcularButton): Um botão "Calcular" que inicia o cálculo.
+JTextArea (resultadoArea): Exibe o valor final (montante) e os juros calculados em reais (R$).
+Layouts Utilizados:
+A aplicação utiliza layouts para organizar os componentes:
+
+BorderLayout: Utilizado como layout principal para organizar os componentes na parte norte, central e sul da janela.
+GridLayout: Usado para criar um painel de entrada de valores organizado em linhas e colunas.
+Funcionalidade:
+A calculadora de juros compostos possui as seguintes funcionalidades:
+
+Os usuários podem inserir o valor principal (capital), a taxa de juros anual e o período em anos.
+O botão "Calcular" executa o cálculo de juros compostos com base nos valores fornecidos.
+O resultado, que inclui o montante acumulado e os juros, é exibido na área de resultados.
+Uso:
+Para calcular os juros compostos, o usuário deve seguir os seguintes passos:
+
+Inserir o valor principal (capital) em reais (R$) no campo "Principal (R$)".
+Inserir a taxa de juros anual em porcentagem (%) no campo "Taxa de Juros Anual (%)".
+Inserir o período em anos no campo "Período (anos)".
+Clicar no botão "Calcular" para obter os resultados.
+A aplicação fornecerá o montante acumulado e os juros calculados com base nos valores inseridos.
+
